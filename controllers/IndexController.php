@@ -20,8 +20,8 @@ class IndexController extends Controller
                     $oldHeight = imagesy($sourceImage);
                     $resizedImage = imagecreatetruecolor(200, 100);
                     imagecopyresized($resizedImage, $sourceImage, 0, 0, 10, 20, 200, 100, $oldWidth, $oldHeight);
-                    $resizedImagePath1 = 'public/upload/resized_Images/'. $array['name'];
-                    $resizedImagePath2 = 'resized_Images/'. $array['name'];
+                    $resizedImagePath1 = 'public/upload/resized_Images/' . $array['name'];
+                    $resizedImagePath2 = 'resized_Images/' . $array['name'];
                     imagejpeg($resizedImage, $resizedImagePath1);
                     $image['new'] = $resizedImagePath2;
                     $this->viewRender('show', $image);

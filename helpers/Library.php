@@ -4,6 +4,7 @@ function redirect($url)
     header('location:' . DOM . $url);
     return true;
 }
+
 function uploadImage($file)
 {
     $filename = $file['image']['name'];
